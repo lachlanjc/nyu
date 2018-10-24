@@ -1,0 +1,45 @@
+import { theme } from '@hackclub/design-system'
+import palx from 'palx'
+
+export const basic = {
+  black: '#1f2d3d',
+  steel: '#273444',
+  slate: '#3c4858',
+  grey: '#8492a6',
+  smoke: '#e0e6ed',
+  snow: '#f9fafc',
+  white: '#ffffff',
+  nyu: '#57068c',
+  nyuBright: '#8900e1'
+}
+
+export const palette = palx(basic.nyuBright)
+
+export const brand = {
+  primary: palette.blue[5],
+  accent: palette.fuschia[5],
+  success: palette.teal[5],
+  info: palette.blue[5],
+  warning: palette.orange[5],
+  error: palette.red[7],
+  muted: basic.silver
+}
+
+export const colors = {
+  ...palette,
+  ...basic,
+  ...brand
+}
+
+theme.colors = colors
+
+const baseFamily =
+  '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif'
+
+const mono = '"Katwijk Mono Web"'
+const sans = '"Chrono"'
+
+theme.font = `${sans},${baseFamily}`
+theme.mono = `${mono},${baseFamily}`
+
+export default theme
