@@ -136,7 +136,7 @@ export default () => (
     <Section
       bg="snow"
       headline="My core design principles."
-      lead="As designers making choices so deeply impact users, it’s just
+      lead="As designers making choices so deeply impacting users, it’s
             imperative we stand for something. Here’s what I stand for."
     >
       <Modules>
