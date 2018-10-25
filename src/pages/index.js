@@ -116,7 +116,7 @@ export default () => (
           </Lead>
         </Container>
         <Modules>
-          <Module icon="emoji" name="Simple" body="“Less, but better.”" />
+          <Module icon="zoom-out" name="Simple" body="“Less, but better.”" />
           <Module
             icon="rep"
             name="Fast"
@@ -130,7 +130,7 @@ export default () => (
           <Module
             icon="support"
             name="Inclusive"
-            body="Make the web accessible to everyone. Don’t exclude people via bad decisions."
+            body="Make the web accessible to everyone. Don’t let bad decisions exclude."
           />
         </Modules>
       </Container>
