@@ -11,9 +11,8 @@ const Base = styled(Box.withComponent('header')).attrs({
 })`
   position: relative;
   background: url(${props => props.src});
+  background-size: cover;
   background-position: center;
-  background-size: auto 100%;
-  background-attachment: fixed;
   min-height: 95vh;
   display: flex;
   flex-direction: column;
@@ -38,6 +37,7 @@ const Base = styled(Box.withComponent('header')).attrs({
   //   border-radius: ${theme.radii[2]};
   // }
   ${theme.mediaQueries.md} {
+    background-attachment: fixed;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: ${theme.space[7]}px;
