@@ -4,12 +4,12 @@ import {
   Box,
   Container,
   Flex,
+  Avatar,
   Heading,
   Card,
   Image,
   Text,
   Link as A,
-  Section,
   Icon
 } from '@hackclub/design-system'
 import { theme } from 'theme'
@@ -105,54 +105,100 @@ const NoThanks = styled(Text.span).attrs({
   opacity: 0.5;
 `
 
+const TextContainer = styled(Box).attrs({ maxWidth: 48 })`
+  max-width: ${({ maxWidth }) => maxWidth}rem;
+`
+
+const Section = ({
+  bg = 'white',
+  bannerWidth = 48,
+  lineColor = 'primary',
+  headline,
+  lead,
+  children,
+  ...props
+}) => (
+  <Box.section bg={theme.colors[bg]} color={theme.colors.black} {...props}>
+    <Container width={1} px={3} pt={3} pb={[4, 5, 6]}>
+      <TextContainer maxWidth={bannerWidth} mb={3}>
+        <Bannerline bg={theme.colors[lineColor]} />
+        <Headline children={headline} />
+        <Lead children={lead} />
+      </TextContainer>
+      {children}
+    </Container>
+  </Box.section>
+)
+
 export default () => (
   <Layout>
     <Header />
-    <Box.section bg={theme.colors.snow}>
-      <Container
-        width={1}
-        px={3}
-        pt={3}
-        pb={[4, 5, 6]}
-        color={theme.colors.black}
-      >
-        <Container maxWidth={48} mx={0}>
-          <Bannerline />
-          <Headline>My core design principles.</Headline>
-          <Lead maxWidth={48}>
-            As designers making choices so deeply impact users, it’s just
-            imperative we stand for something. Here’s what I stand for.
-          </Lead>
-        </Container>
-        <Modules>
-          <Module
-            icon="zoom-out"
-            name="Simple"
-            body={
-              <>
-                “Less, but better.”
-                <NoThanks>“More, but worse.”</NoThanks>
-              </>
-            }
-          />
-          <Module
-            icon="rep"
-            name="Fast"
-            body="The internet hyperspeeds humanity. Don’t slow us down now."
-          />
-          <Module
-            icon="history"
-            name="Iterative"
-            body="Design is never finished, especially on the web. Keep going."
-          />
-          <Module
-            icon="support"
-            name="Inclusive"
-            body="Make the web accessible to everyone. Don’t let bad decisions exclude."
-          />
-        </Modules>
-      </Container>
-    </Box.section>
+    <Section
+      bg="snow"
+      headline="My core design principles."
+      lead="As designers making choices so deeply impact users, it’s just
+            imperative we stand for something. Here’s what I stand for."
+    >
+      <Modules>
+        <Module
+          icon="zoom-out"
+          name="Simple"
+          body={
+            <>
+              “Less, but better.”
+              <NoThanks>“More, but worse.”</NoThanks>
+            </>
+          }
+        />
+        <Module
+          icon="rep"
+          name="Fast"
+          body="The internet hyperspeeds humanity. Don’t slow us down now."
+        />
+        <Module
+          icon="history"
+          name="Iterative"
+          body="Design is never finished, especially on the web. Keep going."
+        />
+        <Module
+          icon="support"
+          name="Inclusive"
+          body="Make the web accessible to everyone. Don’t let bad decisions exclude."
+        />
+      </Modules>
+    </Section>
+    <Section
+      lineColor="hackClub"
+      headline="My most defining work comes at Hack Club."
+      lead={
+        <>
+          <A
+            href="https://hackclub.com"
+            target="_blank"
+            color={theme.colors.hackClub}
+          >
+            Hack Club
+          </A>{' '}
+          is a worlwide, nonprofit network of high schooler-led coding clubs, &
+          a community of young makers everywhere.
+        </>
+      }
+    >
+      <TextContainer mt={3}>
+        <Text fontSize={3}>
+          My involvement in Hack Club started when I began a coding club at my
+          high school, in tenth grade. I soon joined the online community,
+          getting to know{' '}
+          <Avatar
+            src="https://hackclub.com/team/zach.jpg"
+            size={24}
+            alt="Zach Latta"
+            style={{ position: 'relative', top: 4 }}
+          />{' '}
+          Zach Latta, the founder.
+        </Text>
+      </TextContainer>
+    </Section>
     {/* <Box.section bg={theme.colors.nyu} color={theme.colors.black} width={1}>
       <Container py={[4, 5]} px={3}>
         <Headline color="white">Some past work.</Headline>

@@ -14,7 +14,8 @@ export const basic = {
   accent: '#e10058',
   warning: '#e18900',
   success: '#00e189',
-  info: '#0058e1'
+  info: '#0058e1',
+  hackClub: '#e42d42'
 }
 basic.primary = basic.nyu
 basic.muted = basic.silver
