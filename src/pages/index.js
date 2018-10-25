@@ -95,6 +95,15 @@ const Question = ({ name, body, ...props }) => (
     <Text f={2} color="slate" my={0} children={body} />
   </Card>
 )
+const NoThanks = styled(Text.span).attrs({
+  fontSize: 1,
+  caps: true,
+  mt: 1
+})`
+  display: block;
+  text-decoration: line-through;
+  opacity: 0.5;
+`
 
 export default () => (
   <Layout>
@@ -111,12 +120,21 @@ export default () => (
           <Bannerline />
           <Headline>My core design principles.</Headline>
           <Lead maxWidth={48}>
-            As designers making choices so deeply impact users, it’s utterly
+            As designers making choices so deeply impact users, it’s just
             imperative we stand for something. Here’s what I stand for.
           </Lead>
         </Container>
         <Modules>
-          <Module icon="zoom-out" name="Simple" body="“Less, but better.”" />
+          <Module
+            icon="zoom-out"
+            name="Simple"
+            body={
+              <>
+                “Less, but better.”
+                <NoThanks>“More, but worse.”</NoThanks>
+              </>
+            }
+          />
           <Module
             icon="rep"
             name="Fast"
