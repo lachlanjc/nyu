@@ -10,25 +10,31 @@ export const basic = {
   snow: '#f9fafc',
   white: '#ffffff',
   nyu: '#57068c',
-  nyuBright: '#8900e1'
+  nyuBright: '#8900e1',
+  accent: '#e10058',
+  warning: '#e18900',
+  success: '#00e189',
+  info: '#0058e1'
 }
+basic.primary = basic.nyu
+basic.muted = basic.silver
 
 export const palette = palx(basic.nyuBright)
 
-export const brand = {
-  primary: palette.blue[5],
-  accent: palette.fuschia[5],
-  success: palette.teal[5],
-  info: palette.blue[5],
-  warning: palette.orange[5],
-  error: palette.red[7],
-  muted: basic.silver
-}
+// export const brand = {
+//   primary: palette.blue[5],
+//   accent: palette.fuschia[5],
+//   success: palette.teal[5],
+//   info: palette.blue[5],
+//   warning: palette.orange[5],
+//   error: palette.red[7],
+//   muted: basic.silver
+// }
 
 export const colors = {
   ...palette,
-  ...basic,
-  ...brand
+  ...basic
+  // ...brand
 }
 
 theme.colors = colors
