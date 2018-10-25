@@ -12,7 +12,7 @@ const Base = styled(Box.withComponent('header')).attrs({
   position: relative;
   background: url(${props => props.src});
   background-position: center;
-  background-size: cover;
+  background-size: auto 100%;
   background-attachment: fixed;
   min-height: 95vh;
   display: flex;
@@ -67,7 +67,7 @@ export default () => (
       color={theme.colors.white}
       p={2}
     >
-      I want to study @ NYU in Interactive&nbsp;Media&nbsp;Arts.
+      I want to study @ NYU in Interactive Media Arts.
     </Heading.h2>
   </Base>
 )
