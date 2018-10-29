@@ -21,7 +21,7 @@ const Base = styled(Box.withComponent('header')).attrs({
   }
   h2 {
     display: inline-block;
-    text-shadow: 0 0 4px ${theme.colors.violet[4]};
+    // text-shadow: 0 0 4px ${theme.colors.violet[4]};
   }
   mark {
     display: inline-block;
@@ -65,7 +65,8 @@ export default () => (
       mx="auto"
       bg={theme.colors.nyu}
       color={theme.colors.white}
-      p={2}
+      py={2}
+      px={3}
     >
       I want to study @ NYU in Interactive Media Arts.
     </Heading.h2>
