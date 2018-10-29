@@ -130,43 +130,6 @@ const PhotoSection = styled(Flex.withComponent('section')).attrs({
   background-size: cover;
 `
 
-const ReelOverflow = styled(Box)`
-  position: relative;
-  width: 100%;
-  height: 64px;
-  overflow: hidden;
-`
-const ReelWrapper = styled.div`
-  display: block;
-  position: relative;
-  width: 100%;
-  height: 64px;
-`
-const Reel = styled.ul`
-  position: absolute;
-  height: auto;
-  left: 50%;
-  transform: translate3d(-50%, 0, 0);
-  will-change: transform;
-  margin: 0;
-  width: 100%;
-`
-const ReelWord = styled.li.attrs({
-  'aria-label': props => `and ${props.children}`
-})`
-  display: block;
-  position: relative;
-  top: -4px;
-  left: 50%;
-  transform: translateX(-50%);
-  height: 64px;
-  line-height: 64px;
-  list-style-type: none;
-  &:after {
-    content: '.';
-  }
-`
-
 const Identities = styled(Flex.withComponent('ul')).attrs({
   wrap: true,
   justify: 'center'
