@@ -44,7 +44,7 @@ const baseFamily =
   '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif'
 
 const mono = '"Katwijk Mono Web"'
-const sans = '"Chrono"'
+const sans = '"Graphik"'
 
 theme.font = `${sans},${baseFamily}`
 theme.mono = `${mono},${baseFamily}`

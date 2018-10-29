@@ -177,6 +177,7 @@ const Identities = styled(Flex.withComponent('ul')).attrs({
 const Identity = styled(Text.withComponent('li')).attrs({
   color: 'white',
   fontSize: [2, 3],
+  bold: true,
   mx: 2,
   my: 2
 })`
