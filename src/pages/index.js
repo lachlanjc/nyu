@@ -132,7 +132,8 @@ const PhotoSection = styled(Flex.withComponent('section')).attrs({
 
 const Identities = styled(Flex.withComponent('ul')).attrs({
   wrap: true,
-  justify: 'center'
+  justify: 'center',
+  mx: -3
 })`
   list-style: none;
   padding: 0;
@@ -145,7 +146,6 @@ const Identity = styled(Text.withComponent('li')).attrs({
   my: 2
 })`
   border-radius: ${theme.radii[1]};
-  font-weight: 500;
   padding: 2px 10px;
 `
 const IDENTITY_COLORS = [
@@ -227,18 +227,7 @@ export default () => (
     >
       <Sheet maxWidth={48} align="left" p={[3, 4, 5]}>
         <Headline align="center" mb={3}>
-          I bring a new
-          <ReelOverflow>
-            <ReelWrapper>
-              <Reel>
-                <ReelWord>identity</ReelWord>
-                <ReelWord>vision</ReelWord>
-                <ReelWord>perspective</ReelWord>
-                <ReelWord>approach</ReelWord>
-                <ReelWord>philosophy</ReelWord>
-              </Reel>
-            </ReelWrapper>
-          </ReelOverflow>
+          I bring a new perspective.
         </Headline>
         <Text fontSize={3} caps bold align="center" color={theme.colors.slate}>
           I am
@@ -254,9 +243,9 @@ export default () => (
             'Black belt in Taekwondo',
             'Web developer',
             'Quaker-educated',
+            'PA native',
             'Typography-obsessed',
             'Imaginative',
-            'PA native',
             'Music-loving'
           ].map((c, i) => (
             <Identity
@@ -296,8 +285,9 @@ export default () => (
               alt="Zach Latta"
               style={{ position: 'relative', top: 4 }}
             />{' '}
-            Zach Latta.
+            Zach Latta
           </Text.span>
+          . Fall 2017,
         </Text>
       </TextContainer>
     </Section>

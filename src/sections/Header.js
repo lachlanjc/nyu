@@ -21,11 +21,12 @@ const Base = styled(Box.withComponent('header')).attrs({
   }
   h2 {
     display: inline-block;
-    // text-shadow: 0 0 4px ${theme.colors.violet[4]};
+    border-radius: ${theme.radii[2]};
   }
   mark {
     display: inline-block;
     background: transparent url(/underline.svg) bottom left no-repeat;
+    padding-bottom: ${theme.space[2]}px;
     background-size: 100% ${theme.space[3]}px;
     color: inherit;
   }
@@ -54,10 +55,10 @@ const Base = styled(Box.withComponent('header')).attrs({
 
 export default () => (
   <Base src="/photos/Son650_01_8508_2048p.jpg">
-    <Heading.h1 fontSize={[6, 7, 8]}>
-      <span style={{ fontWeight: 'normal' }}>Hi, I’m</span>
+    <Heading.h1 fontSize={[5, 6]}>
+      <span style={{ fontWeight: 'normal' }}>Hi! I’m</span>
       <br />
-      <mark>@lachlanjc.</mark>
+      <mark>Lachlan Campbell.</mark>
     </Heading.h1>
     <Heading.h2
       fontSize={[3, 4, 5]}
