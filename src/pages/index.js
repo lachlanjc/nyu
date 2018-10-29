@@ -17,6 +17,7 @@ import data from 'data'
 import Layout from 'components/Layout'
 import Action from 'components/Action'
 import Module from 'components/Module'
+import Sheet from 'components/Sheet'
 import Header from 'sections/Header'
 import Footer from 'sections/Footer'
 
@@ -70,7 +71,7 @@ const Bannerline = props => (
   />
 )
 
-const Questions = styled(Container).attrs({ maxWidth: 72, mt: [3, 4] })`
+const Projects = styled(Container).attrs({ maxWidth: 72, mt: [3, 4] })`
   display: grid;
   grid-gap: ${theme.space[3]}px;
   width: 100%;
@@ -89,7 +90,7 @@ const Questions = styled(Container).attrs({ maxWidth: 72, mt: [3, 4] })`
     }
   }
 `
-const Question = ({ name, body, ...props }) => (
+const Project = ({ name, body, ...props }) => (
   <Card p={[3, 4]} {...props}>
     <Heading.h3 f={2} color="altDark" caps mt={0} mb={[1, 2]} children={name} />
     <Text f={2} color="slate" my={0} children={body} />
@@ -104,6 +105,94 @@ const NoThanks = styled(Text.span).attrs({
   text-decoration: line-through;
   opacity: 0.5;
 `
+
+const Perspective = styled(Text.span).attrs({
+  fontSize: [4, 5],
+  bold: true
+})`
+  writing-mode: vertical-lr;
+  float: right;
+`
+
+// linear-gradient(
+//     ${props =>
+//       props.inverted
+//         ? 'rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)'
+//         : 'rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.5)'}
+//   ),
+const PhotoSection = styled(Flex.withComponent('section')).attrs({
+  align: 'center',
+  justify: 'center'
+})`
+  position: relative;
+  background: url(${props => props.src});
+  background-position: center;
+  background-size: cover;
+`
+
+const ReelOverflow = styled(Box)`
+  position: relative;
+  width: 100%;
+  height: 64px;
+  overflow: hidden;
+`
+const ReelWrapper = styled.div`
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 64px;
+`
+const Reel = styled.ul`
+  position: absolute;
+  height: auto;
+  left: 50%;
+  transform: translate3d(-50%, 0, 0);
+  will-change: transform;
+  margin: 0;
+  width: 100%;
+`
+const ReelWord = styled.li.attrs({
+  'aria-label': props => `and ${props.children}`
+})`
+  display: block;
+  position: relative;
+  top: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 64px;
+  line-height: 64px;
+  list-style-type: none;
+  &:after {
+    content: '.';
+  }
+`
+
+const Identities = styled(Flex.withComponent('ul')).attrs({
+  wrap: true,
+  justify: 'center'
+})`
+  list-style: none;
+  padding: 0;
+`
+const Identity = styled(Text.withComponent('li')).attrs({
+  color: 'white',
+  fontSize: [2, 3],
+  mx: 2,
+  my: 2
+})`
+  border-radius: ${theme.radii[1]};
+  font-weight: 500;
+  padding: 2px 10px;
+`
+const IDENTITY_COLORS = [
+  'red.7',
+  'orange.6',
+  'lime.5',
+  'teal.6',
+  'blue.7',
+  'violet.7',
+  'fuschia.7'
+]
 
 const TextContainer = styled(Box).attrs({ maxWidth: 48 })`
   max-width: ${({ maxWidth }) => maxWidth}rem;
@@ -167,6 +256,53 @@ export default () => (
         />
       </Modules>
     </Section>
+    <PhotoSection
+      src="/photos/Son650_01_8492_2048p.jpg"
+      py={[5, 6]}
+      style={{ minHeight: '90vh' }}
+    >
+      <Sheet maxWidth={48} align="left" p={[3, 4, 5]}>
+        <Headline align="center" mb={3}>
+          I bring a new
+          <ReelOverflow>
+            <ReelWrapper>
+              <Reel>
+                <ReelWord>identity</ReelWord>
+                <ReelWord>vision</ReelWord>
+                <ReelWord>perspective</ReelWord>
+                <ReelWord>approach</ReelWord>
+                <ReelWord>philosophy</ReelWord>
+              </Reel>
+            </ReelWrapper>
+          </ReelOverflow>
+        </Headline>
+        <Text fontSize={3} caps bold align="center" color={theme.colors.slate}>
+          I am
+        </Text>
+        <Identities>
+          {[
+            'Radically inclusive',
+            'Queer',
+            'Activist',
+            'Non-binary',
+            'Designer',
+            'Organizer',
+            'Black belt in Taekwondo',
+            'Web developer',
+            'Quaker-educated',
+            'Typography-obsessed',
+            'Imaginative',
+            'PA native',
+            'Music-loving'
+          ].map((c, i) => (
+            <Identity
+              children={c}
+              bg={theme.cx(IDENTITY_COLORS[i % IDENTITY_COLORS.length])}
+            />
+          ))}
+        </Identities>
+      </Sheet>
+    </PhotoSection>
     <Section
       lineColor="hackClub"
       headline="My most defining work comes at Hack Club."
@@ -188,26 +324,28 @@ export default () => (
         <Text fontSize={3}>
           My involvement in Hack Club started when I began a coding club at my
           high school, in tenth grade. I soon joined the online community,
-          getting to know{' '}
-          <Avatar
-            src="https://hackclub.com/team/zach.jpg"
-            size={24}
-            alt="Zach Latta"
-            style={{ position: 'relative', top: 4 }}
-          />{' '}
-          Zach Latta, the founder.
+          getting to know the founder,{' '}
+          <Text.span style={{ whiteSpace: 'nowrap' }}>
+            <Avatar
+              src="https://hackclub.com/team/zach.jpg"
+              size={24}
+              alt="Zach Latta"
+              style={{ position: 'relative', top: 4 }}
+            />{' '}
+            Zach Latta.
+          </Text.span>
         </Text>
       </TextContainer>
     </Section>
     {/* <Box.section bg={theme.colors.nyu} color={theme.colors.black} width={1}>
       <Container py={[4, 5]} px={3}>
         <Headline color="white">Some past work.</Headline>
-        <Questions>
-          <Question
+        <Projects>
+          <Project
             name=""
             body=""
           />
-        </Questions>
+        </Projects>
       </Container>
     </Box.section> */}
     <Footer />
