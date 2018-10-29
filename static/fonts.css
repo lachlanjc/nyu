@@ -19,13 +19,13 @@
   font-style: normal;
 }
 
-/* @font-face {
+@font-face {
   font-family: 'Chrono';
   src: url('/fonts/chrono/ChronoWebMedium.woff') format('woff'),
     url('/fonts/chrono/ChronoWebMedium.eot') format('eot');
   font-weight: 500;
   font-style: normal;
-} */
+}
 
 @font-face {
   font-family: 'Chrono';
