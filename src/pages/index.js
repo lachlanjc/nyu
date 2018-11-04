@@ -268,7 +268,7 @@ export default () => (
           >
             Hack Club
           </A>{' '}
-          is a worlwide, nonprofit network of high schooler-led coding clubs, &
+          is a worldwide, nonprofit network of high schooler-led coding clubs, &
           a community of young makers everywhere.
         </>
       }
