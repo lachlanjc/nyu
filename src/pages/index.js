@@ -491,6 +491,14 @@ export default () => (
           tools. Now, dozens of events and hundreds of thousands of dollars have
           already run on and through Hack Club Bank.
         </Text>
+        <Action
+          is="a"
+          href="https://hackclub.com"
+          bg={theme.colors.hackClub}
+          children="Check out Hack Club"
+          chevronRight
+          scale
+        />
       </TextContainer>
     </Section>
     <Section
