@@ -382,10 +382,51 @@ const Mention = ({ img, name, ...props }) => (
   </Text.span>
 )
 
+const Circle = styled(Box).attrs({ bg: theme.colors.nyuBright })`
+  opacity: 0.25;
+  border-radius: 50%;
+  display: block;
+  width: 50vh;
+  height: 50vh;
+  min-width: 16rem;
+  min-height: 16rem;
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 0;
+`
+
 export default () => (
   <Layout>
     <Header />
-
+    <Flex
+      bg={theme.colors.snow}
+      py={[5, 6]}
+      px={3}
+      flexDirection="column"
+      align="center"
+      justify="center"
+      style={{ position: 'relative', minHeight: '24rem', height: '75vh' }}
+    >
+      <Circle />
+      <Headline>A breif introduction.</Headline>
+      <Action
+        is="a"
+        target="_blank"
+        href="/essays/manifesto.pdf"
+        style={{
+          backgroundImage: `linear-gradient(to bottom, ${
+            theme.colors.nyuBright
+          }, ${theme.colors.nyu})`
+        }}
+        children="Read my manifesto"
+        chevronRight
+        scale
+        mt={4}
+      />
+    </Flex>
     <PhotoSection
       src="/photos/Son650_01_8492_2048p.jpg"
       py={[5, 6]}
@@ -552,6 +593,7 @@ export default () => (
         <Action
           is="a"
           href="/essays/nyu.pdf"
+          target="_blank"
           style={{
             backgroundImage: `linear-gradient(to bottom, ${
               theme.colors.nyuBright
