@@ -32,9 +32,12 @@ const Base = styled(Box.withComponent('header')).attrs({
     color: inherit;
   }
   ${theme.mediaQueries.md} {
-    ${!(navigator ? navigator.userAgent.includes('iPad') : true) && {
+    ${!(typeof window !== 'undefined'
+      ? window.navigator.userAgent.includes('iPad')
+      : true) && {
       backgroundAttachment: 'fixed'
-    }} display: grid;
+    }};
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: ${theme.space[7]}px;
 
