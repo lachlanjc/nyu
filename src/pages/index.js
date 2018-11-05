@@ -225,8 +225,8 @@ export default () => (
       py={[5, 6]}
       style={{ minHeight: '90vh' }}
     >
-      <Sheet maxWidth={48} align="left" p={[3, 4, 5]}>
-        <Headline align="center" mb={3}>
+      <Sheet maxWidth={48} align="left" p={[4, 5]} my={[4, 5]}>
+        <Headline align="center" mb={4}>
           I bring a new perspective.
         </Headline>
         <Text fontSize={3} caps bold align="center" color={theme.colors.slate}>
@@ -243,7 +243,7 @@ export default () => (
             'Black belt in Taekwondo',
             'Web developer',
             'Quaker-educated',
-            'PA native',
+            'Pennsylvanian',
             'Typography-obsessed',
             'Imaginative',
             'Music-loving'
