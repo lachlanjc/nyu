@@ -25,21 +25,16 @@ const Base = styled(Box.withComponent('header')).attrs({
   }
   mark {
     display: inline-block;
+    width: fit-content;
     background: transparent url(/underline.svg) bottom left no-repeat;
     padding-bottom: ${theme.space[2]}px;
     background-size: 100% ${theme.space[3]}px;
     color: inherit;
   }
-  // span {
-  //   display: inline-block;
-  //   background-color: ${theme.colors.nyuBright};
-  //   color: inherit;
-  //   padding: ${theme.space[1]}px ${theme.space[3]}px 0;
-  //   border-radius: ${theme.radii[2]};
-  // }
   ${theme.mediaQueries.md} {
-    background-attachment: fixed;
-    display: grid;
+    ${!navigator.userAgent.includes('iPad') && {
+      backgroundAttachment: 'fixed'
+    }} display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: ${theme.space[7]}px;
 
