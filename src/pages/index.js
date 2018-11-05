@@ -352,7 +352,7 @@ const Section = ({
   ...props
 }) => (
   <Box.section bg={theme.colors[bg]} color={theme.colors.black} {...props}>
-    <Container width={1} px={3} pt={3} pb={[4, 5, 6]}>
+    <Container width={1} px={[3, 4]} pt={3} pb={[4, 5, 6]}>
       <TextContainer maxWidth={bannerWidth} mb={3}>
         <Bannerline bg={theme.colors[lineColor]} />
         <Headline children={headline} />
@@ -397,7 +397,7 @@ export default () => (
     <Flex
       bg={theme.colors.snow}
       py={[5, 6]}
-      px={3}
+      px={[3, 4]}
       flexDirection="column"
       align="center"
       justify="center"
@@ -459,7 +459,7 @@ export default () => (
       </Sheet>
     </PhotoSection>
     <Box.section bg={theme.colors.smoke} color={theme.colors.black} width={1}>
-      <Container py={[4, 5]} px={3}>
+      <Container py={[4, 5]} px={[3, 4]}>
         <Headline align="center" color={theme.colors.nyu}>
           Past & current projects.
         </Headline>
@@ -561,7 +561,7 @@ export default () => (
       </Modules>
     </Section>
     <Box.section bg={theme.colors.smoke} color={theme.colors.black} width={1}>
-      <Container py={[4, 5]} px={3}>
+      <Container py={[4, 5]} px={[3, 4]}>
         <Headline align="center" color={theme.colors.nyu}>
           Beyond the code…
         </Headline>
@@ -592,7 +592,7 @@ export default () => (
               theme.colors.nyuBright
             }, ${theme.colors.nyu})`
           }}
-          children="Read why"
+          children="Read more"
           chevronRight
           scale
         />
