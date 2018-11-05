@@ -286,19 +286,6 @@ const Project = ({ name, body, img, img2, url, ...props }) => (
   </Card>
 )
 
-const Activity = ({ name, body, ...props }) => (
-  <Card p={[3, 4]} my={3} {...props}>
-    <Heading.h3 fontSize={4} mt={0} mb={2} children={name} />
-    <Text
-      dangerouslySetInnerHTML={{
-        __html: body
-      }}
-      fontSize={2}
-      color={theme.colors.slate}
-    />
-  </Card>
-)
-
 const NoThanks = styled(Text.span).attrs({
   fontSize: 1,
   caps: true,
@@ -480,7 +467,7 @@ export default () => (
           <H>directly facilitating dozens of new coding clubs</H> starting up at
           high schools around the world.
         </Text>
-        <Text fontSize={3} my={3}>
+        <Text fontSize={3} mt={3} mb={4}>
           After working (remotely) at Hack Club for the better part of a year, I
           moved to San Francisco for five weeks in the summer of 2018 to{' '}
           <H>intern at their headquarters full-time</H>. There, I designed and
@@ -546,6 +533,29 @@ export default () => (
         </Projects>
       </Container>
     </Box.section>
+    <PhotoSection
+      src="/photos/Son650_01_8470_2048p.jpg"
+      align="flex-start"
+      style={{ minHeight: '90vh' }}
+    >
+      <Sheet maxWidth={36} align="center" px={3} py={4} mt={[4, 5]} mb={[5, 6]}>
+        <Headline fontSize={[4, 5]} mb={3}>
+          I’m excited for a future at NYU.
+        </Headline>
+        <Action
+          is="a"
+          href="/essays/nyu.pdf"
+          style={{
+            backgroundImage: `linear-gradient(to bottom, ${
+              theme.colors.nyuBright
+            }, ${theme.colors.nyu})`
+          }}
+          children="Read why"
+          chevronRight
+          scale
+        />
+      </Sheet>
+    </PhotoSection>
     <Footer />
   </Layout>
 )
