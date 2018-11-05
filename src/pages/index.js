@@ -421,7 +421,7 @@ export default () => (
       />
     </Flex>
     <PhotoSection
-      src="/photos/Son650_01_8492_2048p.jpg"
+      src="/photos/perspective.jpg"
       py={[5, 6]}
       style={{ minHeight: '90vh' }}
     >
@@ -575,7 +575,7 @@ export default () => (
       </Container>
     </Box.section>
     <PhotoSection
-      src="/photos/Son650_01_8470_2048p.jpg"
+      src="/photos/ending.jpg"
       align="flex-start"
       style={{ minHeight: '90vh' }}
     >

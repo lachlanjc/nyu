@@ -52,7 +52,7 @@ const Base = styled(Box.withComponent('header')).attrs({
 `
 
 export default () => (
-  <Base src="/photos/Son650_01_8508_2048p.jpg">
+  <Base src="/photos/intro.jpg">
     <Heading.h1 fontSize={[5, 6]}>
       <span style={{ fontWeight: 'normal' }}>Hi! I’m</span>
       <br />
