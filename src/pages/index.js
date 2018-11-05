@@ -23,6 +23,21 @@ import Footer from 'sections/Footer'
 
 const projects = [
   {
+    name: 'Hack Pennsylvania',
+    url: 'https://hackpenn.com',
+    img: '/projects/hackpenn.png',
+    body: [
+      <>
+        While students on the coasts have dozens of hackathon events a year,
+        Pennsylvania had none—until{' '}
+        <A href="https://hackhappyvalley.com">Hack Happy Valley</A>! I founded &
+        led Pennsylvania’s first high school hackathon, which ran June 2018. I’m
+        now organizing Hack Pennsylvania, a 200+ person slated for next January,
+        with a team of 6.
+      </>
+    ]
+  },
+  {
     name: 'Fossil Funded',
     url: 'https://lachlanjc.me/fossil-funded',
     img: '/projects/fossil-funded.png',
@@ -101,53 +116,59 @@ const projects = [
     ]
   },
   {
-    name: 'Hack Pennsylvania',
-    url: 'https://hackpenn.com',
-    img: '/projects/hackpenn.png',
-    body: [
-      <>
-        While students on the coasts have dozens of hackathon events a year,
-        Pennsylvania had none—until{' '}
-        <A href="https://hackhappyvalley.com">Hack Happy Valley</A>! I founded &
-        led Pennsylvania’s first high school hackathon, which ran June 2018. I’m
-        now organizing Hack Pennsylvania, a 200+ person slated for next January,
-        with a team of 6.
-      </>
-    ]
-  },
-  {
     name: 'Hack Club @ State High',
     url: 'https://statehigh.hackclub.com',
-    img: '/projects/schacks.png',
-    body: ['My high school ']
+    img: 'https://lachlanjc.me/2017/spring/hackclub.jpg',
+    body: [
+      'I founded the local Hack Club at my high school 2.5 years ago, and continue to lead it. We’re an inclusive, creative space for everyone, focused on teaching coding. Well over a hundred students have built and published their first websites on their first day at Hack Club.'
+    ]
   }
 ]
 
 const activities = [
   {
+    img: 'https://lachlanjc.me/2017/spring/tkd.jpg',
     name: 'Taekwondo',
-    body:
+    body: [
       'Since fourth grade, I’ve been training weekly in taekwondo at Chaar Martial Arts here in State College. I practice forms, self-defense, board-breaking, and sparring. Spring 2017, I tested for and was promoted to first-dan black belt, as certified by the Kukkiwon.'
+    ]
   },
   {
+    img: '/projects/teenshale.jpg',
     name: 'TeenShale Network',
-    body:
+    body: [
       'The TeenShale Network is a group of students at my high school working with researchers at Pennsylvania State University to monitor local water quality in relation to fracking in the Marcellus Shale region. We’re funded by grants, including from the NSF, and I’ve been an active member for four years, doing original field research, teaching new members, designing scientific posters and marketing materials, and presenting at a number of professional scientific conferences, including the 2017 Geological Society of America’s Regional Conference in Pittsburgh.'
+    ]
   },
   {
+    img: '/projects/byoq.jpg',
     name: 'BYOQ youth group',
-    body:
-      'I’m an active member of BYOQ, the youth group of a local nonprofit, the Centre LGBTQ+ Support Network. We provide a safe space for queer, trans, and allied youth of all kinds, do social/community work, and promote inclusivity.<br />Beyond attending the group, I’ve gotten involving organizing the second annual Youth Summit, an upcoming all-day event for queer youth in December.'
+    body: [
+      'I’m an active member of BYOQ, the youth group of a local nonprofit, the Centre LGBTQ+ Support Network. We provide a safe space for queer, trans, and allied youth of all kinds, do social/community work, and promote inclusivity.',
+      'Beyond attending the group, I’ve gotten involving organizing the second annual Youth Summit, an upcoming all-day event for queer youth in December.'
+    ]
   },
   {
+    img: '/projects/bathrooms.jpg',
     name: 'LGBTQA+ Alliance',
-    body:
-      'In previous years I have been an active member, but this year I’m a co-leader of the LGBTQA+ Alliance at my high school. We work to promote a fully inclusive and accepting local community, at the school and beyond, via staff trainings, political action, and social engagement, as well as providing a biweekly forum and support space for all students.<br />Last spring, I led a campaign (50+ active hours) to open gender-neutral bathrooms for all students at my school, including petitioning, meeting with school administration and school board members, and getting mentorship from a Planned Parenthood organizer.'
+    body: [
+      'In previous years I have been an active member, but this year I’m a co-leader of the LGBTQA+ Alliance at my high school. We work to promote a fully inclusive and accepting local community, at the school and beyond, via staff trainings, political action, and social engagement, as well as providing a biweekly forum and support space for all students.',
+      'Last spring, I led a campaign (50+ active hours) to open gender-neutral bathrooms for all students at my school, including petitioning, meeting with school administration and school board members, and getting mentorship from a Planned Parenthood organizer.',
+      'Watch my first school board speech (start at 9:00):',
+      <iframe
+        src="https://videoplayer.telvue.com/player/GNduNoua2rBThhw6N4PRP9OCSPf6B2ru/playlists/4827/media/344670?autostart=false&showtabssearch=true&fullscreen=true&fbclid=IwAR3fDV19CLmm7d-0_kV-vIyuQoLkZFV6EgqMNnEUh0dKc2FURR5qkFLgKKs"
+        width="100%"
+        height="225"
+        allowFullscreen
+        frameborder={0}
+      />
+    ]
   },
   {
     name: 'Highrise intern',
-    body:
+    body: [
       'In the summer of 2015, I was hired as a remote intern at Highrise, a multimillion-dollar online software company based in Chicago. Working for Highrise, I designed, built, and tested new features for their central application, increasing transparency and improving the collaboration tools in a legacy technical architecture.'
+    ]
   }
 ]
 
@@ -228,9 +249,6 @@ const Projects = styled(Container).attrs({
     }
   }
 `
-// const Activities = styled(Projects)`
-//   background: url(https://hackclub.com/pattern.svg);
-// `
 const LinkContainer = styled(Flex.withComponent(A)).attrs({
   target: '_blank'
 })``
@@ -282,20 +300,6 @@ const NoThanks = styled(Text.span).attrs({
   opacity: 0.5;
 `
 
-const Perspective = styled(Text.span).attrs({
-  fontSize: [4, 5],
-  bold: true
-})`
-  writing-mode: vertical-lr;
-  float: right;
-`
-
-// linear-gradient(
-//     ${props =>
-//       props.inverted
-//         ? 'rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)'
-//         : 'rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.5)'}
-//   ),
 const PhotoSection = styled(Flex.withComponent('section')).attrs({
   align: 'center',
   justify: 'center'
@@ -443,6 +447,18 @@ export default () => (
         </Identities>
       </Sheet>
     </PhotoSection>
+    <Box.section bg={theme.colors.smoke} color={theme.colors.black} width={1}>
+      <Container py={[4, 5]} px={3}>
+        <Headline align="center" color={theme.colors.nyu}>
+          Past & current projects.
+        </Headline>
+        <Projects>
+          {projects.map(project => (
+            <Project key={project.url} {...project} />
+          ))}
+        </Projects>
+      </Container>
+    </Box.section>
     <Section
       lineColor="hackClub"
       headline="My most defining work comes at Hack Club."
@@ -470,29 +486,16 @@ export default () => (
           Working 20+ hours/week remotely, I shipped new branding, multiple new
           websites & products for Hack Club.
         </Text>
-        <Text fontSize={3} my={3}>
-          Here’s one page I’m proud of. It’s a
-        </Text>
       </TextContainer>
     </Section>
-    <Box.section bg={theme.colors.nyu} color={theme.colors.black} width={1}>
-      <Container py={[4, 5]} px={3}>
-        <Headline color="white">Some past work.</Headline>
-        <Projects>
-          {projects.map(project => (
-            <Project key={project.url} {...project} />
-          ))}
-        </Projects>
-      </Container>
-    </Box.section>
     <Box.section bg={theme.colors.smoke} color={theme.colors.black} width={1}>
       <Container py={[4, 5]} px={3}>
         <Headline align="center" color={theme.colors.nyu}>
-          Into it all.
+          Beyond the code…
         </Headline>
         <Projects>
           {activities.map(activity => (
-            <Activity key={activity.name} {...activity} />
+            <Project key={activity.name} {...activity} />
           ))}
         </Projects>
       </Container>
