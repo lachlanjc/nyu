@@ -37,11 +37,7 @@ injectGlobal`
   h1,
   h2,
   h3 {
-    font-weight: 900;
-  }
-  h1 + h2,
-  .mono {
-    font-family: ${config.mono};
+    font-weight: bold;
   }
   a {
     box-shadow: none;

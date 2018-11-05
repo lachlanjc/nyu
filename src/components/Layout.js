@@ -4,7 +4,6 @@ import data from 'data'
 import ThemeProvider from 'theme'
 import { theme } from 'theme'
 import '../../static/graphik.css'
-import '../../static/katwijk-mono.css'
 
 const { name, title, description, img, url } = data
 
