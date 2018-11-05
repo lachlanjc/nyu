@@ -132,7 +132,7 @@ const activities = [
     img: 'https://lachlanjc.me/2017/spring/tkd.jpg',
     name: 'Taekwondo',
     body: [
-      'Since fourth grade, I’ve been training weekly in taekwondo at Chaar Martial Arts here in State College. I practice forms, self-defense, board-breaking, and sparring. Spring 2017, I tested for and was promoted to first-dan black belt, as certified by the Kukkiwon.'
+      'Since fourth grade, I’ve been training weekly in taekwondo at Chaar Martial Arts here in State College. I practice forms, self-defense, board-breaking, and sparring. In Spring 2017, I tested for and was promoted to first-dan black belt, as certified by the Kukkiwon.'
     ]
   },
   {
@@ -172,7 +172,7 @@ const activities = [
     img2: '/projects/risd.jpg',
     name: 'RISD Pre-College, 2017',
     body: [
-      'Summer 2017, I attended RISD’s Pre-College program, majoring in Industrial Design. Over 6 weeks living in Providence, I designed dozens of projects. Here’s a chair I designed out of two sheets of cardboard, fully collapsible & recyclable with no fasteners.'
+      'Summer 2017, I attended RISD’s Pre-College program, majoring in Industrial Design. Over 6 weeks living in Providence, I designed dozens of projects. Here’s a chair I designed out of only two sheets of cardboard, fully collapsible & recyclable with no fasteners.'
     ]
   },
   {
@@ -401,10 +401,10 @@ export default () => (
       flexDirection="column"
       align="center"
       justify="center"
-      style={{ position: 'relative', minHeight: '24rem', height: '75vh' }}
+      style={{ position: 'relative', overflowX: 'hidden', minHeight: '24rem', height: '75vh' }}
     >
       <Circle />
-      <Headline>A breif introduction.</Headline>
+      <Headline>A brief introduction.</Headline>
       <Action
         is="a"
         target="_blank"
