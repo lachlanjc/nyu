@@ -13,7 +13,8 @@ import {
   Icon
 } from '@hackclub/design-system'
 import { theme } from 'theme'
-import data from 'data'
+import Fade from 'react-reveal/Fade'
+import Flip from 'react-reveal/Flip'
 import Layout from 'components/Layout'
 import Action from 'components/Action'
 import Module from 'components/Module'
@@ -231,7 +232,7 @@ const Bannerline = props => (
 
 const Projects = styled(Container).attrs({
   maxWidth: 72,
-  mt: [3, 4],
+  mt: 3,
   width: 1
 })`
   ${theme.mediaQueries.sm} {
@@ -413,10 +414,12 @@ export default () => (
             'Imaginative',
             'Music-loving'
           ].map((c, i) => (
-            <Identity
-              children={c}
-              bg={theme.cx(IDENTITY_COLORS[i % IDENTITY_COLORS.length])}
-            />
+            <Fade bottom key={c}>
+              <Identity
+                children={c}
+                bg={theme.cx(IDENTITY_COLORS[i % IDENTITY_COLORS.length])}
+              />
+            </Fade>
           ))}
         </Identities>
       </Sheet>
@@ -426,11 +429,13 @@ export default () => (
         <Headline align="center" color={theme.colors.nyu}>
           Past & current projects.
         </Headline>
-        <Projects>
-          {projects.map(project => (
-            <Project key={project.url} {...project} />
-          ))}
-        </Projects>
+        <Fade bottom>
+          <Projects>
+            {projects.map(project => (
+              <Project key={project.url} {...project} />
+            ))}
+          </Projects>
+        </Fade>
       </Container>
     </Box.section>
     <Section
@@ -526,11 +531,13 @@ export default () => (
         <Headline align="center" color={theme.colors.nyu}>
           Beyond the code…
         </Headline>
-        <Projects>
-          {activities.map(activity => (
-            <Project key={activity.name} {...activity} />
-          ))}
-        </Projects>
+        <Fade bottom>
+          <Projects>
+            {activities.map(activity => (
+              <Project key={activity.name} {...activity} />
+            ))}
+          </Projects>
+        </Fade>
       </Container>
     </Box.section>
     <PhotoSection
