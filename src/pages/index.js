@@ -63,7 +63,7 @@ const projects = [
     url: 'https://getnoodl.es',
     img: '/projects/noodles.png',
     body: [
-      'Noodles, my first app, gives you one place for all your recipes.',
+      'Noodles, my first app, is a simple library for all your recipes. Import recipes from around the web, write your own, publish and share them. It won the Congressional App Challenge 2015 for PA-05.',
       'Technologies: Ruby on Rails, jQuery, React.js, SCSS',
       <Box my={2}>
         <A
@@ -120,7 +120,7 @@ const projects = [
     url: 'https://statehigh.hackclub.com',
     img: 'https://lachlanjc.me/2017/spring/hackclub.jpg',
     body: [
-      'I founded the local Hack Club at my high school 2.5 years ago, and continue to lead it. We’re an inclusive, creative space for everyone, focused on teaching coding. Well over a hundred students have built and published their first websites on their first day at Hack Club.'
+      'I founded the local Hack Club at my high school 2.5 years ago, and continue to lead it. We’re an inclusive, creative space for everyone, focused on teaching coding. Well over a hundred students have built and published their first websites on their first day.'
     ]
   }
 ]
@@ -138,7 +138,8 @@ const activities = [
     name: 'TeenShale Network',
     body: [
       'The TeenShale Network is a group of students at my high school working with researchers at Pennsylvania State University to monitor local water quality in relation to fracking in the Marcellus Shale region. We’re funded by grants, including from the NSF, and I’ve been an active member for four years, doing original field research, teaching new members, designing scientific posters and marketing materials, and presenting at a number of professional scientific conferences, including the 2017 Geological Society of America’s Regional Conference in Pittsburgh.'
-    ]
+    ],
+    img2: '/projects/teenshaleconf.jpg'
   },
   {
     img: '/projects/byoq.jpg',
@@ -162,6 +163,13 @@ const activities = [
         allowFullscreen
         frameborder={0}
       />
+    ]
+  },
+  {
+    img2: '/projects/risd.jpg',
+    name: 'RISD Pre-College, 2017',
+    body: [
+      'Summer 2017, I attended RISD’s Pre-College program, majoring in Industrial Design. Over 6 weeks living in Providence, I designed dozens of projects. Here’s a chair I designed out of two sheets of cardboard, fully collapsible & recyclable with no fasteners.'
     ]
   },
   {
@@ -252,7 +260,7 @@ const Projects = styled(Container).attrs({
 const LinkContainer = styled(Flex.withComponent(A)).attrs({
   target: '_blank'
 })``
-const Project = ({ name, body, img, url, ...props }) => (
+const Project = ({ name, body, img, img2, url, ...props }) => (
   <Card my={3} {...props}>
     {img && <Image src={img} />}
     <Box p={[3, 4]}>
@@ -274,6 +282,7 @@ const Project = ({ name, body, img, url, ...props }) => (
         </LinkContainer>
       )}
     </Box>
+    {img2 && <Image src={img2} />}
   </Card>
 )
 
@@ -342,6 +351,16 @@ const TextContainer = styled(Box).attrs({ maxWidth: 48 })`
   max-width: ${({ maxWidth }) => maxWidth}rem;
 `
 
+const H = styled(Text.span)`
+  border-radius: 1em 0 1em 0;
+  background-image: linear-gradient(
+    -100deg,
+    rgba(250, 247, 133, 0.33),
+    rgba(250, 247, 133, 0.66) 95%,
+    rgba(250, 247, 133, 0.1)
+  );
+`
+
 const Section = ({
   bg = 'white',
   bannerWidth = 48,
@@ -378,39 +397,7 @@ const Mention = ({ img, name, ...props }) => (
 export default () => (
   <Layout>
     <Header />
-    <Section
-      bg="snow"
-      headline="My core design principles."
-      lead="As designers making choices deeply impacting users, it’s imperative we stand for something. Here’s what I stand for."
-    >
-      <Modules>
-        <Module
-          icon="zoom-out"
-          name="Simple"
-          body={
-            <>
-              “Less, but better.”
-              <NoThanks>“More, but worse.”</NoThanks>
-            </>
-          }
-        />
-        <Module
-          icon="rep"
-          name="Fast"
-          body="The internet hyperspeeds humanity. Don’t slow us down now."
-        />
-        <Module
-          icon="history"
-          name="Iterative"
-          body="Design is never finished, especially on the web. Keep going."
-        />
-        <Module
-          icon="support"
-          name="Inclusive"
-          body="Make the web accessible to everyone. Don’t let bad decisions exclude."
-        />
-      </Modules>
-    </Section>
+
     <PhotoSection
       src="/photos/Son650_01_8492_2048p.jpg"
       py={[5, 6]}
@@ -482,11 +469,62 @@ export default () => (
           high school, in tenth grade. I soon joined the online community,
           getting to know the founder,{' '}
           <Mention img="https://hackclub.com/team/zach.jpg" name="Zach Latta" />
-          . Fall 2017, I joined the team to lead design, coding, & marketing.
-          Working 20+ hours/week remotely, I shipped new branding, multiple new
-          websites & products for Hack Club.
+          . In September 2017, the nonprofit hired me to redesign their website,
+          and I subsequently joined the team. Working 20+ hours a week during
+          both the last school year and this one, I designed a new brand
+          identity, a new application system, engineered the{' '}
+          <A href="https://github.com/hackclub/design-system">
+            Hack Club Design System
+          </A>
+          , and built new products for Hack Club,{' '}
+          <H>directly facilitating dozens of new coding clubs</H> starting up at
+          high schools around the world.
+        </Text>
+        <Text fontSize={3} my={3}>
+          After working (remotely) at Hack Club for the better part of a year, I
+          moved to San Francisco for five weeks in the summer of 2018 to{' '}
+          <H>intern at their headquarters full-time</H>. There, I designed and
+          built new products, including{' '}
+          <A href="https://hackclub.com/bank">Hack Club Bank</A>, the first
+          financial tool giving high schoolers organizing coding events
+          non-profit bank accounts, and a suite of sponsorship and organizing
+          tools. Now, dozens of events and hundreds of thousands of dollars have
+          already run on and through Hack Club Bank.
         </Text>
       </TextContainer>
+    </Section>
+    <Section
+      bg="snow"
+      headline="My core design principles."
+      lead="As designers making choices deeply impacting users, it’s imperative we stand for something. Here’s what I stand for."
+    >
+      <Modules>
+        <Module
+          icon="zoom-out"
+          name="Simple"
+          body={
+            <>
+              “Less, but better.”
+              <NoThanks>“More, but worse.”</NoThanks>
+            </>
+          }
+        />
+        <Module
+          icon="rep"
+          name="Fast"
+          body="The internet hyperspeeds humanity. Don’t slow us down now."
+        />
+        <Module
+          icon="history"
+          name="Iterative"
+          body="Design is never finished, especially on the web. Keep going."
+        />
+        <Module
+          icon="support"
+          name="Inclusive"
+          body="Make the web accessible to everyone. Don’t let bad decisions exclude."
+        />
+      </Modules>
     </Section>
     <Box.section bg={theme.colors.smoke} color={theme.colors.black} width={1}>
       <Container py={[4, 5]} px={3}>
