@@ -32,7 +32,7 @@ const Base = styled(Box.withComponent('header')).attrs({
     color: inherit;
   }
   ${theme.mediaQueries.md} {
-    ${!navigator.userAgent.includes('iPad') && {
+    ${!(navigator ? navigator.userAgent.includes('iPad') : true) && {
       backgroundAttachment: 'fixed'
     }} display: grid;
     grid-template-columns: repeat(2, 1fr);
