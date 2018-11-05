@@ -183,6 +183,18 @@ const Section = ({
   </Box.section>
 )
 
+const Mention = ({ img, name, ...props }) => (
+  <Text.span style={{ whiteSpace: 'nowrap' }} {...props}>
+    <Avatar
+      src={img}
+      size={24}
+      alt={name}
+      style={{ position: 'relative', top: 4 }}
+    />{' '}
+    {name}
+  </Text.span>
+)
+
 export default () => (
   <Layout>
     <Header />
@@ -278,16 +290,11 @@ export default () => (
           My involvement in Hack Club started when I began a coding club at my
           high school, in tenth grade. I soon joined the online community,
           getting to know the founder,{' '}
-          <Text.span style={{ whiteSpace: 'nowrap' }}>
-            <Avatar
-              src="https://hackclub.com/team/zach.jpg"
-              size={24}
-              alt="Zach Latta"
-              style={{ position: 'relative', top: 4 }}
-            />{' '}
-            Zach Latta
-          </Text.span>
-          . Fall 2017,
+          <Mention img="https://hackclub.com/team/zach.jpg" name="Zach Latta" />
+          . Fall 2017, I joined the team to lead design, coding, & marketing.
+          Working 20+ hours/week remotely, I shipped new branding, multiple new
+          websites & products for Hack Club.
+        </Text>
         </Text>
       </TextContainer>
     </Section>
