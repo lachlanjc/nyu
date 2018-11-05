@@ -17,7 +17,11 @@ const Footer = ({ children }) => (
       <Link target="_blank" href="https://lachlanjc.me" hoverline>
         @lachlanjc
       </Link>
-      , 2018.
+      {', 2018. '}
+      <Link target="_blank" href="https://github.com/lachlanjc/nyu" hoverline>
+        Open source
+      </Link>
+      .
     </Text>
   </Box.footer>
 )
