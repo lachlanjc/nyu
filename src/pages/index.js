@@ -1,5 +1,5 @@
 import React from 'react'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import {
   Box,
   Container,
@@ -14,7 +14,6 @@ import {
 } from '@hackclub/design-system'
 import { theme } from 'theme'
 import Fade from 'react-reveal/Fade'
-import Flip from 'react-reveal/Flip'
 import Layout from 'components/Layout'
 import Action from 'components/Action'
 import Module from 'components/Module'
@@ -66,19 +65,21 @@ const projects = [
     body: [
       'Noodles, my first app, is a simple library for all your recipes. Import recipes from around the web, write your own, publish and share them. It won the Congressional App Challenge 2015 for PA-05.',
       'Technologies: Ruby on Rails, jQuery, React.js, SCSS',
-      <Box my={2}>
+      <>
         <A
           href="/projects/noodles-full.jpg"
           chevronRight
           children="Check out the design"
+          mt={3}
+          mb={1}
+          style={{ display: 'block' }}
         />
-        <br />
         <A
           href="/projects/noodles-process.jpg"
           chevronRight
           children="See the design process"
         />
-      </Box>
+      </>
     ]
   },
   {
@@ -157,12 +158,13 @@ const activities = [
       'In previous years I have been an active member, but this year I’m a co-leader of the LGBTQA+ Alliance at my high school. We work to promote a fully inclusive and accepting local community, at the school and beyond, via staff trainings, political action, and social engagement, as well as providing a biweekly forum and support space for all students.',
       'Last spring, I led a campaign (50+ active hours) to open gender-neutral bathrooms for all students at my school, including petitioning, meeting with school administration and school board members, and getting mentorship from a Planned Parenthood organizer.',
       'Watch my first school board speech (start at 9:00):',
-      <iframe
-        src="https://videoplayer.telvue.com/player/GNduNoua2rBThhw6N4PRP9OCSPf6B2ru/playlists/4827/media/344670?autostart=false&showtabssearch=true&fullscreen=true&fbclid=IwAR3fDV19CLmm7d-0_kV-vIyuQoLkZFV6EgqMNnEUh0dKc2FURR5qkFLgKKs"
+      <video
+        playsInline
+        controls
         width="100%"
-        height="225"
-        allowFullscreen
-        frameborder={0}
+        preload="metadata"
+        src="https://connectabr-vh.akamaihd.net/i/vod/connect-vod/bec3c060-fee7-0131-7784-52540047148e/799f2d37-98ef-4cd8-819d-81dcde39f72e/vod_solid/3d8af2ae-4314-4f45-8c84-3cbf6aebcdef_,1000,.mp4.csmil/master.m3u8"
+        poster="/photos/placeholder.jpg"
       />
     ]
   },
@@ -180,15 +182,6 @@ const activities = [
     ]
   }
 ]
-
-const Banner = styled(Container).attrs({
-  maxWidth: 48,
-  mt: 5,
-  mb: [3, 4],
-  mx: 'auto',
-  px: 3,
-  align: ['left', 'center']
-})``
 
 const Headline = styled(Heading.h2).attrs({
   color: theme.colors.black,
