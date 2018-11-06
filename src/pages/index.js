@@ -148,7 +148,7 @@ const activities = [
     name: 'BYOQ youth group',
     body: [
       'I’m an active member of BYOQ, the youth group of a local nonprofit, the Centre LGBTQ+ Support Network. We provide a safe space for queer, trans, and allied youth of all kinds, do social/community work, and promote inclusivity.',
-      'Beyond attending the group, I’ve gotten involving organizing the second annual Youth Summit, an upcoming all-day event for queer youth in December.'
+      'Beyond attending the group, I’ve gotten involved organizing the second annual Youth Summit, an upcoming all-day event for queer youth in December.'
     ]
   },
   {
