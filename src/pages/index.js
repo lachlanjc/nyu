@@ -39,7 +39,7 @@ const projects = [
   },
   {
     name: 'Fossil Funded',
-    url: 'https://lachlanjc.me/fossil-funded',
+    url: 'https://lachlanjc.me/fossilfunded',
     img: '/projects/fossil-funded.png',
     body: [
       'Our Congresspeople receive a shocking amount of fossil fuel funding – nearly $14 million just in 2016. Fossil Funded is a website I designed and built to make this information broadly available. Type in your address, and immediately see fossil fuel funding of your Representative in 2016, plus easy buttons to contact them by phone, letter, website, & Twitter.',
