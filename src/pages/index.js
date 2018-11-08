@@ -49,7 +49,7 @@ const projects = [
   },
   {
     name: 'Blink',
-    url: 'https://blink.care',
+    url: 'https://blink.lachlanjc.me',
     img: '/projects/blink.jpg',
     body: [
       'Blink is a communication tool for those who cannot speak or move, while being significantly more flexible, affordable, and accurate than current technologies on the market. Competitors cost $10,000+, but Blink costs less than $20 to build.',
