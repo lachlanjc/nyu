@@ -581,7 +581,8 @@ export default () => (
     >
       <Sheet maxWidth={36} align="center" px={3} py={4} mt={[4, 5]} mb={[5, 6]}>
         <Headline fontSize={[4, 5]} mb={3}>
-          I’m excited for a future at NYU.
+          I would be honored to join SSP Biochem 2020.
+          Thank you so much for your consideration!
         </Headline>
         <Action
           is="a"
