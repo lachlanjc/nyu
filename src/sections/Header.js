@@ -67,7 +67,7 @@ export default () => (
       py={2}
       px={3}
     >
-      And I want to be a part of SSP 2020.
+      I want to study @ NYU in Interactive Media Arts.
     </Heading.h2>
   </Base>
 )
