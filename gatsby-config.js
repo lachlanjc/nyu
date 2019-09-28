@@ -2,8 +2,8 @@ const path = require('path')
 
 module.exports = {
   siteMetadata: {
-    name: '@lachlanjc @ nyu',
-    siteUrl: 'https://nyu.lachlanjc.me'
+    name: 'Andrew Gao & SSP',
+    siteUrl: 'https://ssp.andrewgao.tech'
   },
   plugins: [
     {
@@ -20,8 +20,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: '@lachlanjc @ nyu',
-        short_name: 'nyu',
+        name: 'Andrew Gao & SSP',
+        short_name: 'SSP',
         start_url: '/',
         background_color: '#ffffff',
         theme_color: '#57068c',
