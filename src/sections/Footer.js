@@ -13,11 +13,11 @@ const Footer = ({ children }) => (
       Thanks for reading.
     </Heading.h3>
     <Text fontSize={1}>
-      Site by{' '}
-      <Link target="_blank" href="https://lachlanjc.me" hoverline>
-        @lachlanjc
+      Site made with 💖by{' '}
+      <Link target="_blank" href="https://andrewgao.tech" hoverline>
+        Andrew Gao
       </Link>
-      {', 2018. '}
+      {', 2019. '}
       <Link target="_blank" href="https://github.com/lachlanjc/nyu" hoverline>
         Open source
       </Link>

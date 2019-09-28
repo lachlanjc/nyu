@@ -404,7 +404,7 @@ export default () => (
       style={{ position: 'relative', overflowX: 'hidden', minHeight: '24rem', height: '75vh' }}
     >
       <Circle />
-      <Headline>A brief introduction.</Headline>
+      <Headline>A brief overview.</Headline>
       <Action
         is="a"
         target="_blank"
@@ -414,7 +414,7 @@ export default () => (
             theme.colors.nyuBright
           }, ${theme.colors.nyu})`
         }}
-        children="Read my manifesto"
+        children="Why SSP?"
         chevronRight
         scale
         mt={4}
@@ -434,19 +434,19 @@ export default () => (
         </Text>
         <Identities>
           {[
-            'Radically inclusive',
-            'Queer',
-            'Activist',
-            'Non-binary',
-            'Designer',
-            'Organizer',
-            'Black belt in Taekwondo',
-            'Web developer',
-            'Quaker-educated',
-            'Pennsylvanian',
-            'Typography-obsessed',
+            'Inclusive',
+            'Creative',
+            'Artistic',
+            'Multilingual',
+            'Responsible',
+            'Mature',
+            'Funny',
+            'Supportive',
             'Imaginative',
-            'Music-loving'
+            'Dedicated',
+            'Determined',
+            'Curious',
+            'Adaptable'
           ].map((c, i) => (
             <Fade bottom key={c}>
               <Identity
@@ -461,7 +461,7 @@ export default () => (
     <Box.section bg={theme.colors.smoke} color={theme.colors.black} width={1}>
       <Container py={[4, 5]} px={[3, 4]}>
         <Headline align="center" color={theme.colors.nyu}>
-          Past & current projects.
+          Past & current research.
         </Headline>
         <Fade bottom>
           <Projects>
@@ -529,41 +529,41 @@ export default () => (
     </Section>
     <Section
       bg="snow"
-      headline="My core design principles."
-      lead="As designers making choices deeply impacting users, it’s imperative we stand for something. Here’s what I stand for."
+      headline="My core values."
+      lead="As scientists making decisions that will impact the world for generations to come, it’s imperative that we stand for something. Here’s what I stand for."
     >
       <Modules>
         <Module
           icon="zoom-out"
-          name="Simple"
+          name="Integrity"
           body={
             <>
-              “Less, but better.”
-              <NoThanks>“More, but worse.”</NoThanks>
+              “Scientists' statements are commonly accepted as fact by the public. Thus, I believe in absolute integrity, never falsifying, or even misconstruing results to appear more successful. ”
+              <NoThanks>“Claiming to develop microscopic volume blood tests, cough cough Theranos”</NoThanks>
             </>
           }
         />
         <Module
           icon="rep"
-          name="Fast"
-          body="The internet hyperspeeds humanity. Don’t slow us down now."
+          name="Ethicality"
+          body="With recent developments such as CRISPR completely changing the course of humanity at breakneck speeds, it is important now more than ever to carefully consdier and evalute the ethics of our actions as scientists."
         />
         <Module
           icon="history"
-          name="Iterative"
-          body="Design is never finished, especially on the web. Keep going."
+          name="Accessibility"
+          body="Scientists should share their work, facilitating the diffusion of knowledge and innovation around the world, not keep it to themselves. As a researcher, I strive to make non-sensitive data easily accessible to others."
         />
         <Module
           icon="support"
-          name="Inclusive"
-          body="Make the web accessible to everyone. Don’t let bad decisions exclude."
+          name="Inclusivity"
+          body="Due to socioeconomic factors, STEM fields are still not very diverse. I work to encourage and create welcoming, inclusive spaces for all."
         />
       </Modules>
     </Section>
     <Box.section bg={theme.colors.smoke} color={theme.colors.black} width={1}>
       <Container py={[4, 5]} px={[3, 4]}>
         <Headline align="center" color={theme.colors.nyu}>
-          Beyond the code…
+          Beyond the lab...
         </Headline>
         <Fade bottom>
           <Projects>
