@@ -1,8 +1,8 @@
 {
-  "name": "AndrewGao/SSP",
-  "description": "Andrew Gao wants to go to SSP",
+  "name": "@lachlanjc/nyu",
+  "description": "@lachlanjc wants to go to NYU",
   "version": "1.0.0",
-  "author": "Andrew Gao <andrewgao22@gmail.com>",
+  "author": "Lachlan Campbell <lachlan@hackclub.com>",
   "license": "MIT",
   "private": true,
   "scripts": {
