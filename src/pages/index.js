@@ -120,7 +120,7 @@ const projects = [
   {
     name: 'Hack Club @ State High',
     url: 'https://statehigh.hackclub.com',
-    img: 'https://lachlanjc.me/2017/spring/hackclub.jpg',
+    img: 'https://2017.lachlanjc.com/spring/hackclub.jpg',
     body: [
       'I founded the local Hack Club at my high school 2.5 years ago, and continue to lead it. We’re an inclusive, creative space for everyone, focused on teaching coding. Well over a hundred students have built and published their first websites on their first day.'
     ]
