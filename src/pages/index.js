@@ -129,7 +129,7 @@ const projects = [
 
 const activities = [
   {
-    img: 'https://lachlanjc.me/2017/spring/tkd.jpg',
+    img: 'https://2017.lachlanjc.com/spring/tkd.jpg',
     name: 'Taekwondo',
     body: [
       'Since fourth grade, I’ve been training weekly in taekwondo at Chaar Martial Arts here in State College. I practice forms, self-defense, board-breaking, and sparring. In Spring 2017, I tested for and was promoted to first-dan black belt, as certified by the Kukkiwon.'
