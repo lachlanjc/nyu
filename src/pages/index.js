@@ -163,7 +163,7 @@ const activities = [
         controls
         width="100%"
         preload="metadata"
-        src="https://connectabr-vh.akamaihd.net/i/vod/connect-vod/bec3c060-fee7-0131-7784-52540047148e/799f2d37-98ef-4cd8-819d-81dcde39f72e/vod_solid/3d8af2ae-4314-4f45-8c84-3cbf6aebcdef_,1000,.mp4.csmil/master.m3u8"
+        src="https://connectabr-vh.akamaihd.net/i/bec3c060-fee7-0131-7784-52540047148e/799f2d37-98ef-4cd8-819d-81dcde39f72e/vod_solid/3d8af2ae-4314-4f45-8c84-3cbf6aebcdef_,1000,.mp4.csmil/master.m3u8"
         poster="/photos/placeholder.jpg"
       />
     ]
@@ -401,7 +401,12 @@ export default () => (
       flexDirection="column"
       align="center"
       justify="center"
-      style={{ position: 'relative', overflowX: 'hidden', minHeight: '24rem', height: '75vh' }}
+      style={{
+        position: 'relative',
+        overflowX: 'hidden',
+        minHeight: '24rem',
+        height: '75vh'
+      }}
     >
       <Circle />
       <Headline>A brief introduction.</Headline>
@@ -410,9 +415,7 @@ export default () => (
         target="_blank"
         href="/essays/manifesto.pdf"
         style={{
-          backgroundImage: `linear-gradient(to bottom, ${
-            theme.colors.nyuBright
-          }, ${theme.colors.nyu})`
+          backgroundImage: `linear-gradient(to bottom, ${theme.colors.nyuBright}, ${theme.colors.nyu})`
         }}
         children="Read my manifesto"
         chevronRight
@@ -588,9 +591,7 @@ export default () => (
           href="/essays/nyu.pdf"
           target="_blank"
           style={{
-            backgroundImage: `linear-gradient(to bottom, ${
-              theme.colors.nyuBright
-            }, ${theme.colors.nyu})`
+            backgroundImage: `linear-gradient(to bottom, ${theme.colors.nyuBright}, ${theme.colors.nyu})`
           }}
           children="Read more"
           chevronRight
