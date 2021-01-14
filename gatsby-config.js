@@ -3,7 +3,7 @@ const path = require('path')
 module.exports = {
   siteMetadata: {
     name: '@lachlanjc @ nyu',
-    siteUrl: 'https://nyu.lachlanjc.me'
+    siteUrl: 'https://nyu.lachlanjc.com'
   },
   plugins: [
     {
@@ -17,20 +17,7 @@ module.exports = {
         data: path.join(__dirname, 'src/data.json')
       }
     },
-    {
-      resolve: 'gatsby-plugin-manifest',
-      options: {
-        name: '@lachlanjc @ nyu',
-        short_name: 'nyu',
-        start_url: '/',
-        background_color: '#ffffff',
-        theme_color: '#57068c',
-        display: 'minimal-ui'
-      }
-    },
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-styled-components',
-    'gatsby-plugin-netlify',
-    'gatsby-plugin-no-sourcemaps'
+    'gatsby-plugin-styled-components'
   ]
 }

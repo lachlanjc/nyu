@@ -14,7 +14,7 @@ const Footer = ({ children }) => (
     </Heading.h3>
     <Text fontSize={1}>
       Site by{' '}
-      <Link target="_blank" href="https://lachlanjc.me" hoverline>
+      <Link target="_blank" href="https://lachlanjc.com" hoverline>
         @lachlanjc
       </Link>
       {', 2018. '}

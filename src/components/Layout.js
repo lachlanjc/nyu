@@ -19,6 +19,7 @@ export default ({ children }) => (
       <meta charSet="UTF-8" />
       <meta name="viewport" content="width=device-width,initial-scale=1" />
       <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+      <link rel="manifest" href="/manifest.webmanifest" />
       <meta name="theme-color" content={theme.colors.nyu} />
       {meta([
         { name: 'description', content: description },

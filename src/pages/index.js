@@ -39,7 +39,7 @@ const projects = [
   },
   {
     name: 'Fossil Funded',
-    url: 'https://lachlanjc.me/fossilfunded',
+    url: 'https://lachlanjc.github.io/fossilfunded/',
     img: '/projects/fossil-funded.png',
     body: [
       'Our Congresspeople receive a shocking amount of fossil fuel funding – nearly $14 million just in 2016. Fossil Funded is a website I designed and built to make this information broadly available. Type in your address, and immediately see fossil fuel funding of your Representative in 2016, plus easy buttons to contact them by phone, letter, website, & Twitter.',
@@ -49,7 +49,7 @@ const projects = [
   },
   {
     name: 'Blink',
-    url: 'https://blink.lachlanjc.me',
+    url: 'https://blink.lachlanjc.com',
     img: '/projects/blink.jpg',
     body: [
       'Blink is a communication tool for those who cannot speak or move, while being significantly more flexible, affordable, and accurate than current technologies on the market. Competitors cost $10,000+, but Blink costs less than $20 to build.',
