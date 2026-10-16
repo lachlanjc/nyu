@@ -30,7 +30,7 @@ const projects = [
       <>
         While students on the coasts have dozens of hackathon events a year,
         Pennsylvania had none—until{' '}
-        <A href="https://hackhappyvalley.com">Hack Happy Valley</A>! I founded &
+        <A href="https://happyvalley.hackpenn.com">Hack Happy Valley</A>! I founded &
         led Pennsylvania’s first high school hackathon, which ran June 2018. I’m
         now organizing Hack Pennsylvania, a 200+ person slated for next January,
         with a team of 6.
